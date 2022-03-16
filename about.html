@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <title>Anytime Fitness</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <link rel= "stylesheet" href= "./style.css">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDicGXbtar2oQ0pI_90aaJBooHeQsf7TbM&callback=initMap&libraries=&v=weekly" async></script>
+    <script>
+        function initMap() {
+          const tpyAF = { lat: 1.3330533, lng: 103.8494162 };
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 17,
+            center: tpyAF,
+          });
+          const marker = new google.maps.Marker({
+            position: tpyAF,
+            map: map,
+          });
+        }
+      </script>
+</head>
+<body>
+    <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./facilities.html">Facilities</a>
+        <a href="./images.html">Images</a>
+        <a class="active" href="#">About</a>
+    </div>
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Anytime Fitness - Toa Payoh Branch</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fas fa-map-location"></i> Location
+                    </div>
+                    <div class="panel-body">
+                        <div><i class="fas fa-location-dot"></i> Address: <span style="font-weight: bold;">BLK 190 Lorong 6 Toa Payoh #02-516 Singapore, Central Singapore 310190</span></div>
+                        <br><br>
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <i class="fas fa-address-card"></i> About Us
+                    </div>
+                    <div class="panel-body">
+                        <div><i class="fas fa-clock"></i> Opening Hours: <span style="font-weight: bold;">Open 24/7 to Members</span></div>
+                        <div><i class="fas fa-phone"></i> Contact: <span style="font-weight: bold;">+65 8379 8092</span></div>
+                        <br>
+                        <div>
+                            <a href="https://www.facebook.com/AnytimeFitnessToaPayoh" target="_blank" class="social-icon" style="color: #4267B2;"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/anytimefitnesstoapayoh/" target="_blank" class="social-icon" style="color: #9b6954;"><i class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com/AnytimeSG_" target="_blank" class="social-icon" style="color: #00acee;"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UCexu1phbvK8q7ws2jQ0hd5Q" target="_blank" class="social-icon" style="color: #c4302b;"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
